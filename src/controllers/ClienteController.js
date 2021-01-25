@@ -24,7 +24,8 @@ class ClienteController {
 
         let result;
         let cliente = new Cliente( null,
-                                   req.body.nome)
+                                   req.body.nome,
+                                   req.body.valor_hora)
         cliente = await ClienteBO.incluirCliente(cliente);
 
         if(cliente.error) {
@@ -41,7 +42,8 @@ class ClienteController {
 
         let result;
         let cliente = new Cliente( req.params.id, 
-                                   req.body.nome)
+                                   req.body.nome,
+                                   req.body.valor_hora)
         cliente = await ClienteBO.alterarCliente(cliente);
 
         if(cliente.error) {

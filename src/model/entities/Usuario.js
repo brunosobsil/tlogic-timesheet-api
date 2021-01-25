@@ -1,11 +1,12 @@
 class Usuario {
 
-    constructor(id, nome, email, senha, status) {
+    constructor(id, nome, email, senha, status, valor_hora) {
         this._id = id;
         this._nome = nome;
         this._email = email;
         this._senha = senha;
         this._status = status;
+        this._valor_hora = valor_hora;
     }
 
     get id() {
@@ -46,6 +47,14 @@ class Usuario {
 
     set status(status) {
         this._status = status;
+    }
+
+    get valor_hora() {
+        return this._valor_hora;
+    }
+
+    set valor_hora(valor_hora) {
+        this._valor_hora = valor_hora;
     }
 
 }

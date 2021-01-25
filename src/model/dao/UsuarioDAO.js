@@ -43,6 +43,7 @@ class UsuarioDAO {
               email: usuario.email,
               senha: usuario.senha,
               status: usuario.status,
+              valor_hora: usuario.valor_hora
         });
 
         return newUser.id;
@@ -54,6 +55,7 @@ class UsuarioDAO {
             email: usuario.email,
             senha: usuario.senha,
             status: usuario.status,
+            valor_hora: usuario.valor_hora
         }, {
             where: { id: usuario.id }
         });

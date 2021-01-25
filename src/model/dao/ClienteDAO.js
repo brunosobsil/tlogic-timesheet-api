@@ -15,6 +15,7 @@ class ClienteDAO {
     async incluirCliente(cliente) {
         let newCli = await Cliente.create({
               nome: cliente.nome,
+              valor_hora: cliente.valor_hora
         });
 
         return newCli.id;
@@ -23,6 +24,7 @@ class ClienteDAO {
     async alterarCliente(cliente) {
         await Cliente.update({
             nome: cliente.nome,
+            valor_hora: cliente.valor_hora
         }, {
             where: { id: cliente.id }
         });
