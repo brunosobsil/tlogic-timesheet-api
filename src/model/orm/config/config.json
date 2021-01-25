@@ -1,0 +1,28 @@
+{
+  "desenv": {
+      "username": "postgres",
+      "password": "123456",
+      "database": "timesheet",
+      "host": "localhost",
+      "dialect": "postgres",
+      "operatorsAliases": false,
+      "logging": false,
+      "define": {
+        "underscored": true, 
+        "freezeTableName": false
+      }
+  },
+  "production": {
+      "username": "uqfcgfqbvljplz",
+      "password": "7c2296a7f5124ac56ceae5c9718116b2c2e0ddddafa97804ff97fcb70ef4efc1",
+      "database": "d8jh7rafd4gnji",
+      "host": "ec2-3-220-193-133.compute-1.amazonaws.com",
+      "dialect": "postgres",
+      "operatorsAliases": false,
+      "logging": false,
+      "define": {
+        "underscored": true, 
+        "freezeTableName": false
+      }
+  }
+}
