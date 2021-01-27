@@ -16,10 +16,6 @@ class UsuarioBO {
         const error = new Array();
         let usu = await dao.obterUsuarios();
 
-        if(usuario.cliente == null){
-            error.push('o cliente informado não existe');
-        }
-
         if (usu.length > 0) {
             
             if (usu.some(item => item.email === usuario.email)){
@@ -69,9 +65,6 @@ class UsuarioBO {
 
                 if (usu.length > 0) {
 
-                    if(usuario.cliente == null){
-                        error.push('o cliente informado não existe');
-                    }
 
                     if (usu.some(item => item.email === usuario.email && item.id != usuario.id)){
                         error.push('email já cadastrado');

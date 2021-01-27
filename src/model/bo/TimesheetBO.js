@@ -13,7 +13,7 @@ class TimesheetBO {
     async incluirTimesheet(timesheet){
         
         try {
-            tms = await dao.incluirTimesheet(timesheet);
+            let tms = await dao.incluirTimesheet(timesheet);
 
             return {
                 error: false,
@@ -24,6 +24,7 @@ class TimesheetBO {
             }
 
         } catch (error) {
+            console.log(error);
             return {
                 error: true,
                 status_code: 500,
@@ -36,7 +37,7 @@ class TimesheetBO {
 
     async alterarTimesheet(timesheet){
         try {
-            tms = await dao.alterarTimesheet(timesheet);
+            let tms = await dao.alterarTimesheet(timesheet);
 
             return {
                 error: false,
