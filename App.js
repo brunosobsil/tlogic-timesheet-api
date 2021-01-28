@@ -1,5 +1,6 @@
-//const AutenticacaoController = require('./src/controllers/AutenticacaoController');
-//const controller = new AutenticacaoController();
+const AutenticacaoController = require('./src/controllers/AutenticacaoController');
+const controller = new AutenticacaoController();
+
 const express = require('express');
 const cors = require('cors');
 
@@ -8,7 +9,7 @@ class App {
     constructor(){
         this.express = express();
         this.middlewares();
-  //      this.auth();
+        this.auth();
         this.routes();        
     }
 
@@ -17,11 +18,10 @@ class App {
         this.express.use(express.urlencoded({ extended: false }));
         this.express.use(cors());
     }
-    /*
+    
     auth(){
         this.express.use(controller.validarToken);
     }
-    */
 
     routes(){
         require('./src/routes')(this.express);

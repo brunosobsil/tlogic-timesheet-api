@@ -67,6 +67,13 @@ class UsuarioDAO {
         await user.save();
     }
 
+    async obterUsuariosPorEmail(usuario) {
+        const user = await Usuario.findAll({
+            where: { email: usuario.email }
+        });
+        return user;
+    }
+
 }
 
 module.exports = new UsuarioDAO();

@@ -1,5 +1,5 @@
 {
     "password_salt": "$2b$10$Mcpe6xDQ75.ESfQ7uxjdRO",
     "jwt_hash": "z9tFwt9mcZlh0qWmYZLbMM4mGadk2S",
-    "unsafe_routes": ["login", "aprovacao"]
+    "unsafe_routes": ["login"]
 }
