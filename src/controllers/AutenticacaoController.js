@@ -9,7 +9,7 @@ class AutenticacaoController {
         usuario.email = req.body.email;
 
         let auth = await AutenticacaoBO.autenticarUsuario(usuario);
-        res.send(auth);
+        res.status(auth.status_code).send({token: auth.token, user: auth.user});
     }
 
     async validarToken(req, res, next) {
