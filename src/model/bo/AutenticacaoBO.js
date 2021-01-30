@@ -31,7 +31,7 @@ class AutenticacaoBO {
                         status_message: 'OK',
                         message: 'autenticado',
                         token: token,
-                        user: {
+                        usuario: {
                             nome: user[0].nome,
                             email: user[0].email,
                             id: user[0].id
