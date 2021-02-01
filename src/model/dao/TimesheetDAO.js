@@ -33,6 +33,7 @@ class TimesheetDAO {
               data: timesheet.data,
               id_usuario: timesheet.usuario.id,
               id_cliente: timesheet.cliente.id,
+              observacao: timesheet.observacao,
               apontamentos: timesheet.apontamentos
         },
         { 
@@ -51,7 +52,8 @@ class TimesheetDAO {
         await Timesheet.update({
             data: timesheet.data,
             id_usuario: timesheet.usuario.id,
-            id_cliente: timesheet.cliente.id
+            id_cliente: timesheet.cliente.id,
+            observacao: timesheet.observacao,
         }, {
             where: { id: timesheet.id }
         });

@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        data: DataTypes.DATE
+        data: DataTypes.DATE,
+        observacao: DataTypes.STRING
     });
     
     Timesheet.associate = models => {

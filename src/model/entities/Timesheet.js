@@ -1,9 +1,10 @@
 class Timesheet {
-    constructor(id, usuario, data, cliente, apontamentos){
+    constructor(id, usuario, data, cliente, observacao, apontamentos){
         this._id = id;
         this._usuario = usuario;
         this._data = data;
         this._cliente = cliente;
+        this._obervacao = observacao;
         this._apontamentos = apontamentos;
     }
 
@@ -37,6 +38,14 @@ class Timesheet {
 
     set cliente(cliente) {
         this._cliente = cliente;
+    }
+
+    get observacao() {
+        return this._obervacao;
+    }
+
+    set observacao(observacao) {
+        this._observacao = observacao;
     }
 
     get apontamentos() {

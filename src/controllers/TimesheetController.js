@@ -32,6 +32,7 @@ class TimesheetController {
                                        req.body.usuario,
                                        req.body.data,
                                        req.body.cliente,
+                                       req.body.observacao,
                                        req.body.apontamentos);
         timesheet = await TimesheetBO.incluirTimesheet(timesheet);
 
@@ -52,6 +53,7 @@ class TimesheetController {
                                        req.body.usuario,
                                        req.body.data,
                                        req.body.cliente,
+                                       req.body.observacao,
                                        req.body.apontamentos);
         timesheet = await TimesheetBO.alterarTimesheet(timesheet);
 
@@ -71,6 +73,7 @@ class TimesheetController {
                                        req.body.usuario,
                                        req.body.data,
                                        req.body.cliente,
+                                       req.body.observacao,
                                        req.body.apontamentos);
         timesheet = await TimesheetBO.excluirTimesheet(timesheet);
 
