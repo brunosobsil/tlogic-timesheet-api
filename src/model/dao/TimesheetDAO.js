@@ -1,6 +1,7 @@
 const { Timesheet } = require('../orm/models');
 const { Apontamento } = require('../orm/models');
 const { Op } = require('sequelize');
+const Sequelize = require('sequelize');
 
 class TimesheetDAO {
 
