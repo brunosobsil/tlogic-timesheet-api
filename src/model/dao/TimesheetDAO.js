@@ -21,6 +21,10 @@ class TimesheetDAO {
                 id_cliente: { [Op.between]: [cliente_de, cliente_ate] },
                 id_usuario: { [Op.between]: [usuario_de, usuario_ate] }
             },
+            order: [
+                ['id', 'ASC'],
+                ['sequencia', 'ASC'],
+            ],
             include: [{model: Apontamento, as: 'apontamentos'}]
         });
 
