@@ -23,7 +23,7 @@ class TimesheetDAO {
             },
             order: [
                 ['id', 'ASC'],
-                ['sequencia', 'ASC'],
+                [Sequelize.literal("apontamentos.sequencia"), 'ASC']
             ],
             include: [{model: Apontamento, as: 'apontamentos'}]
         });
