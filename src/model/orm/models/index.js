@@ -17,6 +17,7 @@ if (config.use_env_variable) {
 }
 */
 if (process.env.DATABASE_URL) {
+
   // the application is executed on Heroku ... use the postgres database
   sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect:  'postgres',
@@ -50,6 +51,10 @@ fs
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-sequelize.sync()
+sequelize.sync({ force: true }).then(result => {
+  console.log(result);
+}).catch(err => {
+  console.log(err);
+});
 
 module.exports = db;
