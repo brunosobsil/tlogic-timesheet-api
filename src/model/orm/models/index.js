@@ -52,7 +52,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 sequelize.sync({ force: true }).then(result => {
-  console.log(result);
+  console.log('sequelize sync ok');
 }).catch(err => {
   console.log(err);
 });

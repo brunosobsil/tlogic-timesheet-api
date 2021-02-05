@@ -3,6 +3,7 @@ const controller = new AutenticacaoController();
 
 const express = require('express');
 const cors = require('cors');
+const db = require('./src/model/orm/models');
 
 class App {
 
