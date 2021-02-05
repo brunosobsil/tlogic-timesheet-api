@@ -5,7 +5,7 @@
       "database": "timesheet",
       "host": "localhost",
       "dialect": "postgres",
-      "logging": false,
+      "logging": true,
       "define": {
         "underscored": true, 
         "freezeTableName": false
@@ -17,7 +17,7 @@
     "database": "dddi8cs6tp1ihd",
     "host": "ec2-52-6-178-202.compute-1.amazonaws.com",
     "dialect": "postgres",
-    "logging": false,
+    "logging": true,
     "define": {
       "underscored": true, 
       "freezeTableName": false
