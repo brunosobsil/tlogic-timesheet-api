@@ -4,6 +4,14 @@ const controller = new AutenticacaoController();
 const express = require('express');
 const cors = require('cors');
 const db = require('./src/model/orm/models');
+db.sequelize
+.authenticate()
+.then(() => {
+  console.log('Connection has been established successfully.');
+})
+.catch(err => {
+  console.error('Unable to connect to the database:', err);
+});
 
 class App {
 
