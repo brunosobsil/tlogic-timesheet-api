@@ -5,17 +5,17 @@
       "database": "timesheet",
       "host": "localhost",
       "dialect": "postgres",
-      "logging": true,
+      "logging": false,
       "define": {
         "underscored": true, 
         "freezeTableName": false
       }
   },
   "production": {
-    "username": "ikwfeqwxnibxck",
-    "password": "2c2635a1b9963f265eb36530539a23e0085f119ece702f659824d6a8b6d3a117",
-    "database": "dddi8cs6tp1ihd",
-    "host": "ec2-52-6-178-202.compute-1.amazonaws.com",
+    "username": "aoetmtmghufnxp",
+    "password": "fca06dfe53f2e2803a409ff6d4466ea1094d3e789810589a00b44b26bba007d0",
+    "database": "dfo0nnh9q79f3h",
+    "host": "ec2-3-214-3-162.compute-1.amazonaws.com",
     "dialect": "postgres",
     "logging": true,
     "define": {
