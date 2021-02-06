@@ -7,4 +7,5 @@ module.exports = function (app) {
     app.post('/usuario', controller.incluirUsuario);
     app.put('/usuario/:id', controller.alterarUsuario);
     app.put('/usuario/:id/status', controller.alterarStatusUsuario);
+    app.get('/usuario/:id/data_de/:data_de/data_ate/:data_ate', controller.extratoHoras)
 }

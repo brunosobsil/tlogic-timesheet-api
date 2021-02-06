@@ -1,9 +1,6 @@
 const Usuario = require('../model/entities/Usuario');
 const UsuarioBO = require('../model/bo/UsuarioBO');
 
-const Cliente = require('../model/entities/Cliente');
-const ClienteBO = require('../model/bo/ClienteBO');
-
 class UsuarioController {
 
     async obterUsuario(req, res) {
@@ -83,6 +80,35 @@ class UsuarioController {
         }
 
         res.status(usu.status_code).json(result);
+
+    }
+
+    async extratoHoras(req,res){
+        
+        let usuario; 
+        let data_de;
+        let data_ate;
+        let result;
+        
+        if (req.params.id) {
+            usuario = new Usuario();
+            usuario.id = req.params.id;
+        }
+
+        if(req.params.data_de){
+            data_de = req.params.data_de;
+        }
+
+        if(req.params.data_ate){
+            data_ate = req.params.data_ate;
+        }
+
+        if(usuario && data_de && data_ate){
+            result = await UsuarioBO.extratoHoras(usuario, data_de, data_ate);
+            res.status(200).json(result);
+        }else{
+            res.status(400).json({message: 'Parametros invalidos'});
+        }
 
     }
 

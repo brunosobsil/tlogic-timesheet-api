@@ -160,11 +160,10 @@ class UsuarioBO {
         }
 
     }
-    /*
-    async obterHorasPorUsuarios(dt_ini, dt_fin){
-        return await dao.obterHorasPorUsuarios(dt_ini, dt_fin);
+    
+    async extratoHoras(usuario, dt_ini, dt_fin){
+        return await dao.extratoHoras(usuario, dt_ini, dt_fin);
     }
-    */
 
 }
 
