@@ -19,7 +19,7 @@ class UsuarioDAO {
         return user;
     }
 
-    async exratoHoras(usuario, data_de, data_ate){
+    async extratoHoras(usuario, data_de, data_ate){
         const query = 'SELECT * FROM extrato_horas(:id, :dt1, :dt2)';
         const result = await Usuario.sequelize.query(query, {
             replacements: {id: usuario.id, dt1: data_de, dt2: data_ate},
