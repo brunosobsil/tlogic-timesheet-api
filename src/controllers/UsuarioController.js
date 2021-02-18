@@ -112,6 +112,29 @@ class UsuarioController {
 
     }
 
+    async extratoHorasPeriodo(req,res){
+        
+        let data_de;
+        let data_ate;
+        let result;
+
+        if(req.params.data_de){
+            data_de = req.params.data_de;
+        }
+
+        if(req.params.data_ate){
+            data_ate = req.params.data_ate;
+        }
+
+        if(data_de && data_ate){
+            result = await UsuarioBO.extratoHorasPeriodo(data_de, data_ate);
+            res.status(200).json(result);
+        }else{
+            res.status(400).json({message: 'Parametros invalidos'});
+        }
+
+    }
+
 }
 
 module.exports = UsuarioController;

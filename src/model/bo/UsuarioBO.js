@@ -165,6 +165,10 @@ class UsuarioBO {
         return await dao.extratoHoras(usuario, dt_ini, dt_fin);
     }
 
+    async extratoHorasPeriodo(dt_ini, dt_fin){
+        return await dao.extratoHorasPeriodo(dt_ini, dt_fin);
+    }
+
 }
 
 module.exports = new UsuarioBO();

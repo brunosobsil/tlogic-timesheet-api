@@ -18,11 +18,20 @@ class UsuarioDAO {
         });
         return user;
     }
-
+    // Um usuário específico
     async extratoHoras(usuario, data_de, data_ate){
         const query = 'SELECT * FROM extrato_horas(:id, :dt1, :dt2)';
         const result = await Usuario.sequelize.query(query, {
             replacements: {id: usuario.id, dt1: data_de, dt2: data_ate},
+            type: Usuario.sequelize.QueryTypes.SELECT,
+        });
+        return result;
+    }
+    // Todos os usuários
+    async extratoHorasPeriodo(data_de, data_ate){
+        const query = 'SELECT * FROM extrato_tech(:dt1, :dt2)';
+        const result = await Usuario.sequelize.query(query, {
+            replacements: {dt1: data_de, dt2: data_ate},
             type: Usuario.sequelize.QueryTypes.SELECT,
         });
         return result;
