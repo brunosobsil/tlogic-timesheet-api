@@ -12,6 +12,16 @@ class AutenticacaoController {
         res.status(auth.status_code).send({token: auth.token, usuario: auth.usuario});
     }
 
+    async autenticarUsuarioAdmin(req, res) {
+
+        let usuario = new Usuario();
+        usuario.senha = req.body.senha;
+        usuario.email = req.body.email;
+
+        let auth = await AutenticacaoBO.autenticarUsuarioAdmin(usuario);
+        res.status(auth.status_code).send({token: auth.token, usuario: auth.usuario});
+    }
+
     async validarToken(req, res, next) {
         let auth = await AutenticacaoBO.validarToken(req);
 

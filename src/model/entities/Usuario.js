@@ -1,12 +1,13 @@
 class Usuario {
 
-    constructor(id, nome, email, senha, status, valor_hora) {
+    constructor(id, nome, email, senha, status, valor_hora, admin) {
         this._id = id;
         this._nome = nome;
         this._email = email;
         this._senha = senha;
         this._status = status;
         this._valor_hora = valor_hora;
+        this._admin = admin;
     }
 
     get id() {
@@ -55,6 +56,14 @@ class Usuario {
 
     set valor_hora(valor_hora) {
         this._valor_hora = valor_hora;
+    }
+
+    get admin() {
+        return this._admin;
+    }
+
+    set admin(admin) {
+        this._admin = admin;
     }
 
 }

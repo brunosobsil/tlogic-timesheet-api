@@ -29,7 +29,8 @@ class UsuarioController {
                                    req.body.email, 
                                    req.body.senha,
                                    req.body.status,
-                                   req.body.valor_hora);
+                                   req.body.valor_hora,
+                                   req.body.admin );
 
         usuario = await UsuarioBO.incluirUsuario(usuario);
 
@@ -50,7 +51,8 @@ class UsuarioController {
                                   req.body.email, 
                                   req.body.senha,
                                   req.body.status,
-                                  req.body.valor_hora);
+                                  req.body.valor_hora,
+                                  req.body.admin);
         usuario = await UsuarioBO.alterarUsuario(usuario);
 
         if(usuario.error) {

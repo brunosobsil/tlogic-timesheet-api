@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
         email: {type: DataTypes.STRING, unique: true},
         senha: DataTypes.STRING,
         status: DataTypes.BOOLEAN,
-        valor_hora: DataTypes.FLOAT
+        valor_hora: DataTypes.FLOAT,
+        admin: DataTypes.BOOLEAN,
     });
 
     return Usuario;
