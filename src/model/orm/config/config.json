@@ -1,14 +1,21 @@
 {
   "desenv": {
-      "username": "postgres",
-      "password": "123456",
-      "database": "timesheet",
-      "host": "localhost",
+      "username": "aoetmtmghufnxp",
+      "password": "fca06dfe53f2e2803a409ff6d4466ea1094d3e789810589a00b44b26bba007d0",
+      "database": "dfo0nnh9q79f3h",
+      "host": "ec2-3-214-3-162.compute-1.amazonaws.com",
       "dialect": "postgres",
-      "logging": false,
+      "logging": true,
       "define": {
         "underscored": true, 
         "freezeTableName": false
+      },
+      "timezone": "America/Sao_Paulo",
+      "dialectOptions": {
+        "ssl": {
+            "require": true,
+            "rejectUnauthorized": false
+        }
       }
   },
   "production": {
@@ -22,6 +29,7 @@
       "underscored": true, 
       "freezeTableName": false
     },
+    "timezone": "America/Sao_Paulo",
     "dialectOptions": {
       "ssl": {
           "require": true,
