@@ -53,6 +53,52 @@ class FeriadoBO {
 
     }
 
+    async incluirFeriados(feriados){
+        
+        const error = new Array();
+        let fer = await dao.obterFeriados();
+
+        if (fer.length > 0) {
+
+            feriados.map(feriado => {
+                if(fer.some(item => item.data === feriado.data)){
+                    error.push(`Data já cadastrada: ${feriado.data}`);
+                }
+            })
+            
+        }
+
+        if (error.length > 0) {
+            return {
+                error: true,
+                status_code: 409,
+                status_message: 'Conflict',
+                message: error
+            }
+        } else {
+            try {
+                fer = await dao.incluirFeriados(feriados);
+
+                return {
+                    error: false,
+                    status_code: 201,
+                    status_message: 'Created',
+                    message: 'feriados incluidos com sucesso',
+                    body: fer
+                }
+
+            } catch (error) {
+                return {
+                    error: true,
+                    status_code: 500,
+                    status_message: 'Server Error',
+                    message: 'erro ao incluir feriado: ' + JSON.stringify(error)
+                };
+            }
+        }
+
+    }
+
     async alterarFeriado(feriado){
         const error = new Array();
 

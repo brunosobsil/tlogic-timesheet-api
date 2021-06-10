@@ -5,6 +5,7 @@ module.exports = function (app) {
     app.get('/feriado', controller.obterFeriado);
     app.get('/feriado/:data', controller.obterFeriado);
     app.post('/feriado', controller.incluirFeriado);
+    app.post('/feriados', controller.incluirFeriados);
     app.put('/feriado/:data', controller.alterarFeriado);
     app.delete('/feriado/:data/', controller.excluirFeriado);
 }

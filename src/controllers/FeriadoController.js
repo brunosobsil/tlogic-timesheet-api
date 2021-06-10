@@ -37,6 +37,23 @@ class FeriadoController {
 
     }
 
+    async incluirFeriados(req, res) {
+
+        let result;
+        let feriados = req.body;
+        
+        result = await FeriadoBO.incluirFeriados(feriados);
+
+        if(result.error) {
+            result = { status_code: 409, error: result.message };
+        } else {
+            result = { feriados: feriados, status_code: result.status_code, message: result.message };
+        }
+
+        res.status(result.status_code).json(result);
+
+    }
+
     async alterarFeriado(req, res) {
 
         let result;

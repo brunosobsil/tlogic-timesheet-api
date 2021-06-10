@@ -23,6 +23,12 @@ class FeriadoDAO {
         return newFer.data;
     }
 
+    async incluirFeriados(feriados) {
+
+        let res = await Feriado.bulkCreate(feriados);
+        return res;
+    }
+
     async alterarFeriado(feriado) {
         await Feriado.update({
             data: feriado.data,
